@@ -1,15 +1,14 @@
-let buttons = document.querySelectorAll(".icon");
+let icons = document.querySelectorAll(".icon");
 
-buttons.forEach(button => {
-  
-  let list = button.closest('.list')
+icons.forEach((icon) => {
+  let list = icon.closest(".list");
+  let paragraph = document.querySelector(".paragraph");
 
-  let paragraph = list.querySelector(".paragraph");
+  icon.addEventListener("click", () => {
+    paragraph.classList.toggle("minus");
+
+    icon.classList.toggle("minus_icon");
+  });
+});
 
 
-  button.addEventListener('click', () => {
-    paragraph.classList.toggle('minus')
-    
-    button.classList.toggle('minus_icon') 
-  })
-})

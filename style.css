@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(275, 100%, 97%);
+  position: relative;
+}
+
+body::before{
+content: '';
+position: absolute;
+background: url(assets/images/background-pattern-desktop.svg);
+width: 100%;
+height: 30vh;
+left: 0;
+top: 0;
+background-repeat: no-repeat;
+background-size: cover;
+z-index: -1;
+}
+
+.container{
+  width: 100%;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq_box{
+  width: 36rem;
+  background-color: white;
+  border-radius: 1rem;
+  position: absolute;
+  padding: 2rem;
+}
+
+.faq_box h1{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  position: relative;
+  margin-top: auto;
+
+}
+
+
+.star{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 4rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+hr{
+  border:solid 1px rgb(228, 225, 225);
+}
+
+.list_container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.list{
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  position: relative;
+}
+
+.list h3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list:hover h3{
+color: hsl(292, 83%, 37%);
+cursor: pointer;
+}
+
+.paragraph{
+  display: none;
+  color:hsl(292, 16%, 49%);
+ font-size: 17px;
+}
+
+.minus{
+  display: block;
+}
+
+.icon{
+  background: url(assets/images/icon-plus.svg);
+  width: 28px;
+  height: 28px;
+  transition: all 0.5s;
+  position: absolute;
+  right: 0;
+}
+
+.minus_icon{
+  background: url(assets/images/icon-minus.svg);
+   width: 28px;
+  height: 28px;
+  transition: all 0.5s;
+}
+
+.attribution{
+  font-size: 16px; 
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
+/* Mobile */
+@media (max-width:480px) {
+  body::before{
+    content: '';
+background: url(assets/images/background-pattern-mobile.svg);
+}
+.faq_box{
+  width: 90%;
+  padding: 0.9rem;
+}
+
+.list h3{
+  justify-content: space-between;
+  width: 90%;
+  
+}
+  
+}
